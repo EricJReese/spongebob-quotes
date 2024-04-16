@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here There Be Quotes</h1>
+    <ul class="quotes">
+    <% for(let i=0; i < info.length; i++) {%>
+        <li class="quote">
+            <span><%= `"${info[i].spongeQuote}"` %></span>
+            <span><%= `-${info[i].characterName}` %></span>
+            <span><%= info[i].likes %></span>
+            <span class='fa fa-thumbs-up'></span>
+            <span class='fa fa-trash'></span>
+        </li>
+    <% } %>
+    </ul>
+
+    <h2>What Are Ye Saying My Boy?:</h2>
+
+    <form action="/addQuote" method="POST">
+        <input type="text" placeholder="Quote" name="spongeQuote">
+        <input type="text" placeholder="Character" name="characterName">
+        <input type="submit">
+    </form>
+    
+
+    <script src='js/main.js'></script>
+</body>
+</html>
